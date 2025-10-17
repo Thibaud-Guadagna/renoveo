@@ -1,51 +1,52 @@
 <div class="min-h-screen flex flex-col">
   <app-navbar></app-navbar>
   <div class="flex-1">
-  <section
-    class="flex-col justify-center items-center text-center md:flex md:flex-row md:items-start md:justify-between md:text-left"
-  >
-    <div class="lg:w-1/2 md:px-8 mt-10 md:flex md:flex-col md:items-start md:w-full">
-      <h1 class="text-white md:text-4xl lg:text-7xl text-4xl">
-        ESTIMEZ, GÉREZ, RÉNOVEZ, EN TOUTE SIMPLICITÉ
-      </h1>
-      <h2
-        class="text-white/80 font-thin md:text-2xl lg:text-4xl text-xl w-full self-start lg:mt-16"
+    <section
+      class="flex-col justify-center items-center text-center md:flex md:flex-row md:items-start md:justify-between md:text-left"
+    >
+      <div class="lg:w-1/2 md:px-8 mt-10 md:flex md:flex-col md:items-start md:w-full">
+        <h1 class="text-white md:text-4xl lg:text-7xl text-4xl">
+          ESTIMEZ, GÉREZ, RÉNOVEZ, EN TOUTE SIMPLICITÉ
+        </h1>
+        <h2
+          class="text-white/80 font-thin md:text-2xl lg:text-4xl text-xl w-full self-start lg:mt-16"
+        >
+          Gagnez du temps en visite et obtenez des budgets fiables
+        </h2>
+      </div>
+
+      <div
+        class="relative flex flex-col items-center md:w-1/2 md:flex-row md:justify-end md:items-start md:translate-x-[-80px]"
       >
-        Gagnez du temps en visite et obtenez des budgets fiables
-      </h2>
-    </div>
+        <img
+          src="imageaccueil1.jpg"
+          alt="Cuisine"
+          class="rounded-3xl shadow-xl -ml-24 w-[240px] md:w-[200px] lg:w-[500px] md:ml-0 translate-y-[40px] lg:translate-y-[40px] lg:translate-x-[40px] md:translate-y-[80px] md:translate-x-[90px] md:shrink-0"
+        />
 
-    <div
-      class="relative flex flex-col items-center md:w-1/2 md:flex-row md:justify-end md:items-start md:translate-x-[-80px]"
+        <img
+          src="imageaccueil2.jpg"
+          alt="Salle de bain"
+          class="rounded-3xl shadow-2xl ml-28 w-[240px] md:w-[200px] lg:w-[500px] md:-ml-[160px] translate-y-[10px] lg:translate-y-[300px] lg:translate-x-[40px] md:translate-y-[190px] md:translate-x-[-90px] md:shrink-0 md:z-10"
+        />
+      </div>
+    </section>
+    <!--Boutons-->
+    <section
+      class="flex justify-center md:justify-start gap-8 lg:gap-16 md:gap-8 lg:ml-32 md:ml-8 lg:items-end lg:mt-32 md:mt-24 mt-10"
     >
-      <img
-        src="imageaccueil1.jpg"
-        alt="Cuisine"
-        class="rounded-3xl shadow-xl -ml-24 w-[240px] md:w-[200px] lg:w-[500px] md:ml-0 translate-y-[40px] lg:translate-y-[40px] lg:translate-x-[40px] md:translate-y-[80px] md:translate-x-[90px] md:shrink-0"
-      />
-
-      <img
-        src="imageaccueil2.jpg"
-        alt="Salle de bain"
-        class="rounded-3xl shadow-2xl ml-28 w-[240px] md:w-[200px] lg:w-[500px] md:-ml-[160px] translate-y-[10px] lg:translate-y-[300px] lg:translate-x-[40px] md:translate-y-[190px] md:translate-x-[-90px] md:shrink-0 md:z-10"
-      />
-    </div>
-  </section>
-  <!--Boutons-->
-  <section
-    class="flex justify-center md:justify-start gap-8 lg:gap-16 md:gap-8 lg:ml-32 md:ml-8 lg:items-end lg:mt-32 md:mt-24 mt-10"
-  >
-    <button
-      class="text-white bg-[#6E33B1] px-4 py-2 lg:px-6 lg:py-4 rounded-md lg:text-2xl hover:bg-[#522684]"
-    >
-      Estimation Rapide
-    </button>
-    <button
-      class="text-white lg:text-2xl px-6 py-2 lg:px-8 lg:py-4 rounded-lg border-transparent border-gradient-fix hover:bg-[#6E33B1] hover:before:opacity-0 transition-all duration-300"
-    >
-      En savoir plus
-    </button>
-  </section>
+      <button
+        class="text-white bg-primary px-4 py-2 lg:px-6 lg:py-4 rounded-md lg:text-2xl hover:bg-[#522684]"
+        (click)="handleClick()"
+      >
+        Estimation Rapide
+      </button>
+      <button
+        class="text-white lg:text-2xl px-6 py-2 lg:px-8 lg:py-4 rounded-lg border-transparent border-primary hover:bg-primary hover:before:opacity-0 transition-all duration-300"
+      >
+        En savoir plus
+      </button>
+    </section>
   </div>
   <app-footer></app-footer>
 </div>

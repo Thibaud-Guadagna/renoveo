@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { BurgerButton } from '../burger-button/burger-button';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,12 @@ import { BurgerButton } from '../burger-button/burger-button';
   styleUrl: './navbar.css'
 })
 export class Navbar {
-  
+
+  constructor(private router: Router) {}
+
+  handleClick() {
+    this.router.navigate(['/'])
+  }
   isOpen = signal(false);
 
   toggleMenu() {

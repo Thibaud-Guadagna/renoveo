@@ -1,0 +1,88 @@
+<section class="min-h-screen flex flex-col lg:flex-row items-center lg:items-start">
+  <!-- Colonne gauche : contenu -->
+  <div class="flex flex-col lg:w-[95vw] lg:mt-24 md:mt-8 px-4 md:px-6 lg:px-20">
+    <!-- Chevron -->
+    <div class="hidden lg:flex self-start mb-8">
+      <div
+        class="flex items-center justify-center w-12 h-12 rounded-full border-primary transition-all duration-300 hover:shadow-[0_0_15px_rgba(110,51,177,0.6)] cursor-pointer"
+      >
+        <img src="chevron.svg" alt="précédent" class="h-8 pr-1" (click)="previousStep()" />
+      </div>
+    </div>
+
+    <!-- Texte -->
+    <h1 class="text-white text-3xl md:text-5xl lg:text-7xl font-inter font-extrabold mb-8">
+      Bienvenue sur votre générateur <br class="hidden lg:block" />
+      d’estimatif
+    </h1>
+
+    <h2 class="text-white/80 text-lg lg:text-4xl font-poppins font-extralight mb-6">
+      En moins de 2 minutes, créez vos devis, chiffrez votre projet,<br class="hidden lg:block" />
+      et projetez-vous dans vos travaux
+    </h2>
+
+    <div class="space-y-6 lg:mt-8">
+      <div class="flex items-start gap-4">
+        <div
+          class="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center rounded-full border-primary text-white text-lg font-bold"
+        >
+          1
+        </div>
+        <p class="text-white leading-relaxed text-sm md:text-lg lg:text-3xl">
+          Choisissez le mode de chiffrage qui vous convient.
+        </p>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <div
+          class="flex-none w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center rounded-full border-primary text-white text-lg font-bold"
+        >
+          2
+        </div>
+        <p class="text-white leading-relaxed text-sm md:text-lg lg:text-3xl">
+          Indiquez les détails de votre logement et du type de travaux que vous souhaitez réaliser.
+        </p>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <div
+          class="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center rounded-full border-primary text-white text-lg font-bold"
+        >
+          3
+        </div>
+        <p class="text-white leading-relaxed text-sm md:text-lg lg:text-3xl">
+          Chiffrez votre projet.
+        </p>
+      </div>
+
+      <div>
+        <button
+          class="mt-20 md:mt-[32.5vh] lg:mt-20 text-white bg-primary px-10 py-2 lg:px-16 lg:py-4 rounded-md lg:text-2xl hover:bg-[#522684]"
+          (click)="nextStep()"
+        >
+          Commencer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Colonne droite : images -->
+  <div
+    class="flex flex-col items-center lg:items-end justify-center lg:w-1/2 px-4 md:px-8 lg:px-16 mt-12 lg:mt-0"
+  >
+    <div class="flex flex-col items-center relative">
+      <!-- Image du haut -->
+      <img
+        src="sdb.jpg"
+        alt="salle de bain"
+        class="w-24 md:w-64 lg:w-[26rem] rounded-lg shadow-xl -mt-60 ml-32 md:-mt-[50vh] md:ml-1 lg:-mt-28 lg:mr-80"
+      />
+      <!-- Image du bas, légèrement décalée -->
+      <img
+        src="cuisine.jpg"
+        alt="cuisine"
+        class="w-24 md:w-64 lg:w-[26rem] rounded-lg shadow-xl -mt-6 ml-56 md:-mt-16 md:ml-96 lg:-mt-24 lg:ml-40"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<div class="flex items-center justify-center w-[90%] md:w-full max-w-4xl mx-auto md:gap-3 gap-2">
+  @for (step of steps; track step; let i = $index) {
+  <!-- CERCLE -->
+  <div class="relative flex items-center justify-center">
+    <div
+      class="relative flex items-center justify-center font-semibold text-white"
+      [ngClass]="{
+        'w-8 h-8 md:w-14 md:h-14': true,
+        'rounded-full transition-all duration-300 flex items-center justify-center lg:text-4xl md:text-2xl pb-1': true,
+        'bg-black !border-primary !text-white animate-pulseGlow': currentStep() === step,
+        'bg-primary border-primary text-white': currentStep() > step,
+        'bg-white border-gray-300 text-gray-400': currentStep() < step
+      }"
+    >
+      {{ step }}
+    </div>
+  </div>
+
+  <!-- TRAIT -->
+  @if (i < steps.length - 1) {
+  <div
+    class="h-[2px] transition-all duration-300"
+    [ngClass]="{
+      'w-10 md:w-24 bg-primary': currentStep() > step,
+      'w-10 md:w-24 bg-gray-500': currentStep() <= step
+    }"
+  ></div>
+  } }
+</div>
