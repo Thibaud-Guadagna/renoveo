@@ -1,0 +1,15 @@
+<img src="/renoveologo.png" alt="Rénovéo logo" class="hidden lg:block h-24 md:h-32" />
+
+@if (isMobile()) {
+<app-navbar></app-navbar>
+}
+
+<div>
+  @if (currentStep() === 0) {
+  <app-start></app-start>
+  }
+</div>
+
+@if (currentStep() === 1) {
+<app-designation-form></app-designation-form>
+}

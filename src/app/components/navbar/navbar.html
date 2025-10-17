@@ -1,31 +1,20 @@
 <section class="">
   <nav class="relative flex flex-col md:flex-row items-center justify-between">
     <!-- Top row: Logo + Burger -->
-    <div
-      class="z-40 flex w-full flex-row-reverse md:flex-row justify-between items-center"
-    >
-    <img
-    src="/avatar.svg"
-    alt="avatar icone"
-    class="md:hidden h-12 mx-2"
-    />
-      <img
-        src="/renoveologo.png"
-        alt="Rénovéo logo"
-        class="h-24 md:h-32"
-      />
+    <div class="z-40 flex w-full flex-row-reverse md:flex-row justify-between items-center">
+      <img src="/avatar.svg" alt="avatar icone" class="md:hidden h-12 mx-2" />
+      <img src="/renoveologo.png" alt="Rénovéo logo" class="h-24 md:h-32" (click)="handleClick()" />
       <app-burger-button
         [isOpen]="isOpen"
         [toggle]="toggleMenu"
         class="z-50 md:hidden"
-        
         [class.left-0]="true"
       />
     </div>
 
     <!-- Mobile menu -->
     <ul
-      class="bg-black  z-20 fixed top-0 left-0 h-full w-2/3 text-white flex flex-col gap-6 px-6 pt-24 md:hidden transform transition-transform duration-300 ease-in-out text-lg"
+      class="bg-black z-20 fixed top-0 left-0 h-full w-2/3 text-white flex flex-col gap-6 px-6 pt-24 md:hidden transform transition-transform duration-300 ease-in-out text-lg"
       [class.translate-x-0]="isOpen()"
       [class.-translate-x-full]="!isOpen()"
     >
@@ -36,62 +25,41 @@
     </ul>
 
     <!-- Desktop menu -->
-    <ul
-      class="hidden md:flex gap-6 text-white mt-4 md:mt-0 ml-auto md:mr-4 lg:text-lg md:text-sm"
-    >
+    <ul class="hidden md:flex gap-6 text-white mt-4 md:mt-0 ml-auto md:mr-4 lg:text-lg md:text-sm">
       <li class="relative group cursor-pointer whitespace-nowrap">
-        <a
-          class="transition-colors duration-300 group-hover:text-[#6E33B1]"
-        >
-          Accueil
-        </a>
+        <a class="transition-colors duration-300 group-hover:text-[#6E33B1]"> Accueil </a>
         <span
-          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r 
-         from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
+          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
         ></span>
       </li>
       <li class="relative group cursor-pointer whitespace-nowrap">
-        <a
-          class="transition-colors duration-300 group-hover:text-[#6E33B1]"
-        >
-          Tarifs
-        </a>
+        <a class="transition-colors duration-300 group-hover:text-[#6E33B1]"> Tarifs </a>
         <span
-          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r 
-         from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
+          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
         ></span>
       </li>
       <li class="relative group cursor-pointer whitespace-nowrap">
-        <a
-          class="transition-colors duration-300 group-hover:text-[#6E33B1]"
-        >
-          Qui sommes-nous ?
-        </a>
+        <a class="transition-colors duration-300 group-hover:text-[#6E33B1]"> Qui sommes-nous ? </a>
         <span
-          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r 
-         from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
+          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
         ></span>
       </li>
       <li class="relative group cursor-pointer whitespace-nowrap">
-        <a
-          class="transition-colors duration-300 group-hover:text-[#6E33B1]"
-        >
-          Nous Contacter
-        </a>
+        <a class="transition-colors duration-300 group-hover:text-[#6E33B1]"> Nous Contacter </a>
         <span
-          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r 
-         from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
+          class="absolute left-0 bottom-0 h-[2px] w-0 bg-gradient-to-r from-[#6E1FC7] via-[#D136DF] to-[#19A7CE] transition-all duration-300 group-hover:w-full"
         ></span>
       </li>
       <li class="relative group cursor-pointer whitespace-nowrap -mt-1">
         <button
-  class="bg-[#6E33B1] px-3 py-[9px] rounded-md text-white align-middle leading-none hover:bg-[#522684]"
->
-  Se connecter
-</button>
-  
+          class="bg-primary px-3 py-[9px] rounded-md text-white align-middle leading-none hover:bg-[#522684]"
+        >
+          Se connecter
+        </button>
       </li>
     </ul>
   </nav>
-   <span class="hidden md:block w-full h-[2px] bg-gradient-to-r from-[#6E1FC7] via-[#D136DF] to-[#19A7CE]"></span>
+  <span
+    class="hidden md:block w-full h-[2px] bg-gradient-to-r from-[#6E1FC7] via-[#D136DF] to-[#19A7CE]"
+  ></span>
 </section>

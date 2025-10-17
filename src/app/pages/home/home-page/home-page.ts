@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'
 import { Navbar } from '../../../components/navbar/navbar';
 import { Footer } from '../../../components/footer/footer';
 
@@ -11,5 +12,11 @@ import { Footer } from '../../../components/footer/footer';
   styleUrl: './home-page.css'
 })
 export class HomePage {
+
+  constructor(private router: Router) {}
+
+  handleClick() {
+    this.router.navigate(['/generator'])
+  }
 
 }
